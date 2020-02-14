@@ -1,0 +1,85 @@
+.resume {
+  display: grid;
+  width: 210mm;
+  height: 297mm;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.35);	
+  grid-gap: 5px;
+  grid-template-areas:
+		"name name photo"
+        "work work about"
+        "work work education"
+        "community references skills";
+}
+.grid-area {
+  border: 1px solid black;
+  padding: 20px 20px 20px 20px;
+  background-color: F1F1F1;
+}
+
+
+.name {
+    grid-area: name;
+}
+
+.photo {
+    grid-area: photo;
+}
+
+.about {
+    grid-area: about;
+}
+
+.references {
+    grid-area: references;
+}
+
+.work {
+    grid-area: work;
+}
+
+.skills {
+    grid-area: skills;
+}
+
+.education {
+    grid-area: education;
+}
+
+.community {
+    grid-area: community;
+}
+
+.circle {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.wrapper {
+    padding: 0;
+    display: flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+}
+
+@media (min-width: 900px) {
+  .resume {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "name photo"
+        "about about"
+        "work work"
+        "education education"
+        "skills skills"
+        "community community"
+        "references references"
+  }
+}
+
+
+
+
+
